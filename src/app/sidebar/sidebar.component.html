@@ -1,0 +1,22 @@
+<section
+  class="flex justify-center items-center max-w-[30vw] fixed w-full mt-28"
+>
+  <article class="flex flex-col justify-start w-full px-4 lg:px-16 gap-y-10">
+    <app-search />
+
+    <ul class="flex flex-col gap-2">
+      <h2 class="mb-2 text-secondary font-bold text-xl uppercase">
+        Categorías
+      </h2>
+      @for (categorie of sidebar_categories; track categorie.id) {
+      <li
+        class="` text-grayLight cursor-pointer {{
+          categorie.id === 1 && 'text-primary'
+        }} lg:hover:text-primary transition w-fit `"
+      >
+        {{ categorie.name }}
+      </li>
+      }
+    </ul>
+  </article>
+</section>

@@ -1,6 +1,6 @@
 <section class="flex justify-center items-center max-w-[1400px] fixed w-full">
   <nav
-    class="py-3 px-4 lg:px-20 flex justify-between items-center w-full backdrop-blur-md"
+    class="py-3 px-4 lg:px-16 flex justify-between items-center w-full backdrop-blur-md"
   >
     <a href="/">
       <img
@@ -11,7 +11,12 @@
     </a>
 
     <aside class="gap-4 hidden lg:flex">
-      <button class="btn" type="button">
+      <a
+        href="https://github.com/Asilvazavala/Dev-Tools"
+        target="_blank"
+        rel="noopener"
+        class="btn"
+      >
         <strong>Añadir tool</strong>
         <div id="container-stars">
           <div id="stars"></div>
@@ -21,14 +26,14 @@
           <div class="circle"></div>
           <div class="circle"></div>
         </div>
-      </button>
+      </a>
     </aside>
 
     <article class="lg:hidden">
       @if (!isMenuOpen) {
       <img
         src="/assets/svg/MenuIcon.svg"
-        alt="Logo DevTools"
+        alt="Menu-icon"
         class="`w-8 h-auto object-cover transition duration-700 
         ${{ isMenuOpen ? 'scale-0 delay-0' : 'scale-100 delay-200' }}`"
         (click)="isMenuOpen = true"
@@ -36,14 +41,19 @@
       } @else {
       <img
         src="/assets/svg/XIcon.svg"
-        alt="Logo DevTools"
+        alt="Close-icon"
         class="`w-8 h-auto absolute top-5 right-4 object-cover transition duration-700
         ${{ isMenuOpen ? 'scale-100 delay-200' : 'scale-0 delay-0' }}`"
         (click)="isMenuOpen = false"
       />
 
       <ul class="flex justify-center items-center h-screen w-screen">
-        <button class="btn" type="button">
+        <a
+          href="https://github.com/Asilvazavala/Dev-Tools"
+          target="_blank"
+          rel="noopener"
+          class="btn"
+        >
           <strong>Añadir tool</strong>
           <div id="container-stars">
             <div id="stars"></div>
@@ -53,13 +63,9 @@
             <div class="circle"></div>
             <div class="circle"></div>
           </div>
-        </button>
+        </a>
       </ul>
       }
     </article>
   </nav>
 </section>
-
-<!-- @for (game of games; track game.id) {
-
-} -->
