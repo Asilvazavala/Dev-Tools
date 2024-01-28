@@ -1,0 +1,31 @@
+<section
+  class="flex flex-col justify-start items-start w-full mt-28 gap-4 lg:gap-10"
+>
+  <h1 class="text-secondary text-4xl font-bold">Colores</h1>
+  <ul class="grid grid-cols-1 md:grid-cols-2 min-[1500px]:grid-cols-3 gap-6">
+    @for (card of cards; track card.id) {
+    <li
+      class="flex z-10 flex-col gap-2 border-2 border-primary rounded-2xl p-1 transition lg:hover:border-secondary lg:hover:animate-animatePulseCustom"
+    >
+      <a href="{{ card.link }}" target="_blank" rel="noopener">
+        <img
+          src="{{ card.image }}"
+          alt="{{ card.title }}"
+          class="w-full h-auto object-cover rounded-2xl mb-3"
+        />
+
+        <h3 class="text-secondary text-lg font-bold px-2">{{ card.title }}</h3>
+        @for (categorie of card.categories; track $index) {
+        <ul class="flex gap-2 mb-2 px-2">
+          <li class="text-sm text-grayLight">
+            {{ categorie }}
+          </li>
+        </ul>
+        }
+
+        <p class="px-2 pb-4">{{ card.description }}</p>
+      </a>
+    </li>
+    }
+  </ul>
+</section>
