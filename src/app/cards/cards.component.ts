@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DropdownComponent } from '../dropdown/dropdown.component';
 
 interface cards_props {
   id: number;
@@ -12,15 +13,15 @@ interface cards_props {
 @Component({
   selector: 'app-cards',
   standalone: true,
-  imports: [],
   templateUrl: './cards.component.html',
   styleUrl: './cards.component.css',
+  imports: [DropdownComponent],
 })
 export class CardsComponent {
   cards: cards_props[] = [
     {
       id: 1,
-      image: '/assets/images/categories/colors/Color Hunt.png',
+      image: '/assets/images/categories/colors/Color Hunt.webp',
       title: 'Color Hunt',
       categories: ['Colors'],
       description:
@@ -29,7 +30,7 @@ export class CardsComponent {
     },
     {
       id: 2,
-      image: '/assets/images/categories/colors/UI Colors.png',
+      image: '/assets/images/categories/colors/UI Colors.webp',
       title: 'UI Colors',
       categories: ['Colors'],
       description:
@@ -38,7 +39,7 @@ export class CardsComponent {
     },
     {
       id: 3,
-      image: '/assets/images/categories/colors/Tints.png',
+      image: '/assets/images/categories/colors/Tints.webp',
       title: 'Tints',
       categories: ['Colors'],
       description:
@@ -47,7 +48,7 @@ export class CardsComponent {
     },
     {
       id: 4,
-      image: '/assets/images/categories/colors/Happy Hues.png',
+      image: '/assets/images/categories/colors/Happy Hues.webp',
       title: 'Happy Hues',
       categories: ['Colors'],
       description:
@@ -56,7 +57,7 @@ export class CardsComponent {
     },
     {
       id: 5,
-      image: '/assets/images/categories/colors/Siege Media.png',
+      image: '/assets/images/categories/colors/Siege Media.webp',
       title: 'Siege Media',
       categories: ['Colors'],
       description:
@@ -65,7 +66,7 @@ export class CardsComponent {
     },
     {
       id: 6,
-      image: '/assets/images/categories/colors/Color Review.png',
+      image: '/assets/images/categories/colors/Color Review.webp',
       title: 'Happy Hues',
       categories: ['Colors'],
       description:

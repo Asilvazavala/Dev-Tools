@@ -1,7 +1,18 @@
 <section
-  class="flex flex-col justify-start items-start w-full mt-28 gap-4 lg:gap-10"
+  class="flex flex-col justify-start items-start w-full mt-20 gap-4 lg:gap-8 md:mt-28"
 >
-  <h1 class="text-secondary text-4xl font-bold">Colores</h1>
+  <header class="flex flex-col justify-between w-full lg:flex-row gap-y-4">
+    <article class="flex flex-col">
+      <h1 class="text-secondary text-4xl font-bold leading-8">Colores</h1>
+      <span class="text-grayLight">{{ cards.length }} resultados</span>
+    </article>
+
+    <article class="flex flex-col">
+      <span>ORDEN</span>
+      <app-dropdown class="z-20" />
+    </article>
+  </header>
+
   <ul class="grid grid-cols-1 md:grid-cols-2 min-[1500px]:grid-cols-3 gap-6">
     @for (card of cards; track card.id) {
     <li
@@ -12,6 +23,8 @@
           src="{{ card.image }}"
           alt="{{ card.title }}"
           class="w-full h-auto object-cover rounded-2xl mb-3"
+          loading="eager"
+          decoding="async"
         />
 
         <h3 class="text-secondary text-lg font-bold px-2">{{ card.title }}</h3>
