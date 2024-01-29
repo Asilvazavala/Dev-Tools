@@ -223,7 +223,7 @@ export class CardsComponent implements OnInit {
       description:
         'Construye formularios basados en React eficaces, declarativos, intuitivos y adaptables.',
       link: 'https://formik.org/',
-      keywords: ['form', 'react'],
+      keywords: ['formulario', 'react'],
     },
     {
       id: 18,
@@ -233,7 +233,7 @@ export class CardsComponent implements OnInit {
       description:
         'Formularios basados en React eficaces, flexibles y extensibles con validación fácil de usar.',
       link: 'https://react-hook-form.com/',
-      keywords: ['form', 'react'],
+      keywords: ['formulario', 'react'],
     },
     {
       id: 19,
@@ -243,7 +243,207 @@ export class CardsComponent implements OnInit {
       description:
         'Formularios adatables a cualquier entorno, flexibles y extensibles con validación.',
       link: 'https://tally.so/',
-      keywords: ['form'],
+      keywords: ['formulario'],
+    },
+    {
+      id: 20,
+      image: '/assets/images/categories/fonts/Fontsource.webp',
+      title: 'Fontsource',
+      categories: ['fuentes', 'populares'],
+      description:
+        'Colección de más de 1600 fuentes, las cuales pueden ser descargadas o instaladas en tu editor de código favorito.',
+      link: 'https://fontsource.org/',
+      keywords: ['fuente'],
+    },
+    {
+      id: 21,
+      image: '/assets/images/categories/fonts/Fontshare.webp',
+      title: 'Fontshare',
+      categories: ['fuentes'],
+      description:
+        'Colección de fuentes subidas por la comunidad, incluye una sección para emparejar fuentes.',
+      link: 'https://www.fontshare.com/',
+      keywords: ['fuente'],
+    },
+    {
+      id: 22,
+      image: '/assets/images/categories/fonts/Google Fonts.webp',
+      title: 'Google Fonts',
+      categories: ['fuentes'],
+      description:
+        'Colección de más de 1500 fuentes, las cuales pueden ser descargadas o instaladas en tu editor de código favorito.',
+      link: 'https://fonts.google.com/',
+      keywords: ['fuente'],
+    },
+    {
+      id: 23,
+      image: '/assets/images/categories/fonts/Fontpair.webp',
+      title: 'Fontpair',
+      categories: ['fuentes'],
+      description:
+        'Fuentes y combinaciones de fuentes gratuitas para usar en su próximo proyecto de diseño.',
+      link: 'https://www.fontpair.co/',
+      keywords: ['fuente'],
+    },
+    {
+      id: 24,
+      image: '/assets/images/categories/icons/Tabler Icons.webp',
+      title: 'Tabler Icons',
+      categories: ['iconos'],
+      description:
+        'Más de 4900 iconos en píxeles para diseño web, gratuitos y de código abierto diseñados para hacer que su sitio web o aplicación sea atractivo',
+      link: 'https://tabler.io/icons',
+      keywords: ['iconos'],
+    },
+    {
+      id: 25,
+      image: '/assets/images/categories/icons/Font Awesome.webp',
+      title: 'Font Awesome',
+      categories: ['iconos', 'populares'],
+      description:
+        'Biblioteca de más de 30,000 iconos y conjunto de herramientas de Internet diseño web, gratuitos y de código abierto.',
+      link: 'https://fontawesome.com/search',
+      keywords: ['iconos'],
+    },
+    {
+      id: 26,
+      image: '/assets/images/categories/icons/React Icons.webp',
+      title: 'React Icons',
+      categories: ['iconos'],
+      description:
+        'Incluya íconos populares en sus proyectos de React fácilmente, utiliza importaciones de ES6.',
+      link: 'https://react-icons.github.io/react-icons/',
+      keywords: ['iconos', 'react'],
+    },
+    {
+      id: 27,
+      image: '/assets/images/categories/icons/Box Icons.webp',
+      title: 'Box Icons',
+      categories: ['iconos'],
+      description:
+        'Íconos web de alta calidad de código abierto cuidadosamente elaborados para diseñadores y desarrolladores.',
+      link: 'https://boxicons.com/',
+      keywords: ['iconos'],
+    },
+    {
+      id: 28,
+      image: '/assets/images/categories/templates/HTML rev.webp',
+      title: 'HTML rev',
+      categories: ['plantillas'],
+      description:
+        'Plantillas HTML, Bootstrap y Tailwind gratuitas para sitios web, páginas de destino, próximamente, blogs, portafolios, comercio electrónico y paneles de control.',
+      link: 'https://htmlrev.com/?utm_source=public_apis',
+      keywords: ['plantillas'],
+    },
+    {
+      id: 29,
+      image: '/assets/images/categories/templates/Frontendor.webp',
+      title: 'Frontendor',
+      categories: ['plantillas', 'populares'],
+      description:
+        'Plantillas y bloques HTML reutilizables para ayudarle a crear páginas de destino hermosas y profesionales de forma rápida y sencilla mediante COPIAR Y PEGAR.',
+      link: 'https://frontendor.com/',
+      keywords: ['plantillas'],
+    },
+    {
+      id: 30,
+      image: '/assets/images/categories/templates/Theme Selection.webp',
+      title: 'Theme Selection',
+      categories: ['plantillas'],
+      description:
+        'La plantilla de panel de administración gratuita, los temas HTML y los kits U seleccionados, de alta calidad, diseño moderno, profesionales y fáciles de usar crean su aplicación más rápido.',
+      link: 'https://themeselection.com/',
+      keywords: ['plantillas'],
+    },
+    {
+      id: 31,
+      image: '/assets/images/categories/templates/Canva.webp',
+      title: 'Canva',
+      categories: ['plantillas'],
+      description:
+        'Plataforma de diseño gráfico, utilizada para crear gráficos, presentaciones, carteles, documentos y otro contenido visual para redes sociales.',
+      link: 'https://www.canva.com/',
+      keywords: ['plantillas'],
+    },
+    {
+      id: 32,
+      image: '/assets/images/categories/streamers/Midudev.webp',
+      title: 'Midudev',
+      categories: ['streamers', 'populares'],
+      description:
+        'Streamings sobre Desarrollo FullStack con JavaScript. Directos completos y extracto de los mejores momentos.',
+      link: 'https://www.youtube.com/@midulive',
+      keywords: ['streamers', 'javascript'],
+    },
+    {
+      id: 33,
+      image: '/assets/images/categories/streamers/Goncy.webp',
+      title: 'Goncy',
+      categories: ['streamers'],
+      description:
+        'Soluciones de desarrollo FullStack, videos y directos sobre simulacros de entrevistas, integraciones, etc.',
+      link: 'https://www.youtube.com/@goncypozzo',
+      keywords: ['streamers', 'typescript'],
+    },
+    {
+      id: 34,
+      image: '/assets/images/categories/streamers/MoureDev.webp',
+      title: 'MoureDev',
+      categories: ['streamers'],
+      description:
+        'Tutoriales de programación y desarrollo de software. Aprende a crear aplicaciones Web, Android e iOS con Python, Kotlin, Swift y mucho más...        ',
+      link: 'https://www.youtube.com/@mouredev',
+      keywords: ['streamers', 'mobile'],
+    },
+    {
+      id: 35,
+      image: '/assets/images/categories/streamers/Hola Mundo.webp',
+      title: 'Hola Mundo',
+      categories: ['streamers'],
+      description:
+        'Soluciones de programación y desarrollo de software, enfocado en JavaScript. Aprende a crear aplicaciones Web.',
+      link: 'https://www.youtube.com/@HolaMundoDev',
+      keywords: ['streamers', 'javascript'],
+    },
+    {
+      id: 36,
+      image: '/assets/images/categories/streamers/Programador X.webp',
+      title: 'Programador X',
+      categories: ['streamers'],
+      description:
+        'Consejos y tips para desarrolladores web, videos sobre pruebas técnicas, tutoriales, ruta de aprendizaje, etc.',
+      link: 'https://www.youtube.com/@ProgramadorX',
+      keywords: ['streamers'],
+    },
+    {
+      id: 37,
+      image: '/assets/images/categories/streamers/Fazt.webp',
+      title: 'Fazt',
+      categories: ['streamers'],
+      description:
+        'Programación, desarrollo Web y muchos otros temas relacionados al mundo de la informática en general. Desde aprender las bases de un lenguaje de programacion hasta subir tu sitio o aplicación Web.',
+      link: 'https://www.youtube.com/@FaztTech',
+      keywords: ['streamers'],
+    },
+    {
+      id: 38,
+      image: '/assets/images/categories/streamers/freeCodeCamp.webp',
+      title: 'freeCodeCamp',
+      categories: ['streamers'],
+      description:
+        'Aprende a programar gratis. Construye Proyectos. Obtén Certificaciones. freeCodeCamp es una organización sin fines de lucro cuya misión es crear recursos gratis para ayudarte a aprender a programar.',
+      link: 'https://www.youtube.com/@freecodecampespanol',
+      keywords: ['streamers'],
+    },
+    {
+      id: 39,
+      image: '/assets/images/categories/streamers/Vida MRR.webp',
+      title: 'Vida MRR',
+      categories: ['streamers'],
+      description:
+        'Canal de diseño y desarrollo web, donde puedes encontrar contenido de Javascript, Bootstrap, TailwindCSS, Node.js, PHP y MySQL y más recursos necesarios para ser el mejor desarrollador web.',
+      link: 'https://www.youtube.com/@vidamrr',
+      keywords: ['streamers', 'javascript'],
     },
   ];
 }

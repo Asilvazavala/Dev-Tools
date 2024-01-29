@@ -66,6 +66,12 @@ export class SidebarComponent {
     },
     {
       id: 7,
+      icon: '/assets/svg/Template.svg',
+      name: 'Plantillas',
+      link: '/category/plantillas',
+    },
+    {
+      id: 8,
       icon: '/assets/svg/Youtube.svg',
       name: 'Streamers',
       link: '/category/streamers',
