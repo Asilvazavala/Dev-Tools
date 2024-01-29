@@ -13,7 +13,7 @@ module.exports = {
         animatePulseCustom: "pulse 2s ease-in-out 1",
       },
       colors: {
-        primary: "#9eaddb",
+        primary: "#d4def1",
         secondary: "#656bab",
         blueLight: "#d3d8ea",
         grayLight: "#7d7d7d",

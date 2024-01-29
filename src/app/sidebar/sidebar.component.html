@@ -3,17 +3,31 @@
     <app-search />
 
     <ul class="flex flex-col gap-2">
-      <h2 class="mb-2 text-secondary font-bold text-xl uppercase">
+      <h2
+        class="mb-2 text-secondary font-bold text-xl uppercase tracking-wider"
+      >
         Categorías
       </h2>
       @for (categorie of sidebar_categories; track categorie.id) {
-      <li
-        class="` text-grayLight cursor-pointer {{
-          categorie.id === 1 && 'text-primary'
-        }} lg:hover:text-primary transition w-fit `"
-      >
-        {{ categorie.name }}
-      </li>
+      <a href="{{ categorie.link }}" class="w-fit">
+        <li
+          class="` cursor-pointer {{
+            categorie.name.toLowerCase() === currentCategory
+              ? 'text-primary'
+              : 'text-grayLight'
+          }} lg:hover:text-primary transition w-fit flex items-center gap-2 group `"
+        >
+          <img
+            src="{{ categorie.icon }}"
+            alt="{{ categorie.name }}"
+            class="` size-5 group-hover:invert rounded-full  
+            {{
+              categorie.name.toLowerCase() === currentCategory ? 'invert' : ''
+            }} transition `"
+          />
+          <span>{{ categorie.name }}</span>
+        </li>
+      </a>
       }
     </ul>
   </article>

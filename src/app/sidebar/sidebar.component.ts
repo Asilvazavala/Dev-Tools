@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { SearchComponent } from '../search/search.component';
 
+import { SearchComponent } from '../search/search.component';
+import { SharedService } from '../shared.service';
 interface sidebar_categories_props {
   id: number;
   icon?: string;
@@ -16,31 +17,58 @@ interface sidebar_categories_props {
   imports: [SearchComponent],
 })
 export class SidebarComponent {
+  currentCategory = '';
+
+  constructor(private sharedService: SharedService) {}
+
+  ngOnInit(): void {
+    this.sharedService.currentCategory$.subscribe((category) => {
+      this.currentCategory = category;
+    });
+  }
+
   sidebar_categories: sidebar_categories_props[] = [
     {
       id: 1,
+      icon: '/assets/svg/Color.svg',
       name: 'Colores',
-      link: '/colores',
+      link: '/category/colores',
     },
     {
       id: 2,
+      icon: '/assets/svg/Component.svg',
       name: 'Componentes',
-      link: '/componentes',
+      link: '/category/componentes',
     },
     {
       id: 3,
+      icon: '/assets/svg/Deploy.svg',
       name: 'Deploy',
-      link: '/deploy',
+      link: '/category/deploy',
     },
     {
       id: 4,
-      name: 'Fuentes',
-      link: '/fuentes',
+      icon: '/assets/svg/Forms.svg',
+      name: 'Formularios',
+      link: '/category/formularios',
     },
     {
       id: 5,
+      icon: '/assets/svg/Font.svg',
+      name: 'Fuentes',
+      link: '/category/fuentes',
+    },
+    {
+      id: 6,
+      icon: '/assets/svg/Icon.svg',
       name: 'Iconos',
-      link: '/iconos',
+      link: '/category/iconos',
+    },
+    {
+      id: 7,
+      icon: '/assets/svg/Youtube.svg',
+      name: 'Streamers',
+      link: '/category/streamers',
     },
   ];
 }

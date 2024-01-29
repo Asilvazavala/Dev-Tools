@@ -3,18 +3,22 @@
 >
   <header class="flex flex-col justify-between w-full lg:flex-row gap-y-4">
     <article class="flex flex-col">
-      <h1 class="text-secondary text-4xl font-bold leading-8">Colores</h1>
-      <span class="text-grayLight">{{ cards.length }} resultados</span>
+      <h1
+        class="text-secondary text-4xl font-bold leading-8 tracking-wider uppercase"
+      >
+        {{ currentCategory === "" ? "Populares" : currentCategory }}
+      </h1>
+      <span class="text-grayLight">{{ filteredCards.length }} resultados</span>
     </article>
 
     <article class="flex flex-col">
-      <span>ORDEN</span>
+      <span class="text-secondary font-bold tracking-wider">ORDEN</span>
       <app-dropdown class="z-20" />
     </article>
   </header>
 
   <ul class="grid grid-cols-1 md:grid-cols-2 min-[1500px]:grid-cols-3 gap-6">
-    @for (card of cards; track card.id) {
+    @for (card of filteredCards; track card.id) {
     <li
       class="flex z-10 flex-col gap-2 border-2 border-primary rounded-2xl p-1 transition lg:hover:border-secondary lg:hover:animate-animatePulseCustom"
     >
@@ -28,15 +32,16 @@
         />
 
         <h3 class="text-secondary text-lg font-bold px-2">{{ card.title }}</h3>
-        @for (categorie of card.categories; track $index) {
-        <ul class="flex gap-2 mb-2 px-2">
-          <li class="text-sm text-grayLight">
-            {{ categorie }}
-          </li>
-        </ul>
-        }
 
-        <p class="px-2 pb-4">{{ card.description }}</p>
+        <div class="flex gap-2 mb-3 px-2">
+          @for (categorie of card.categories; track $index) {
+          <span class="text-sm text-grayLight">{{ categorie }}</span>
+          @if ($index !== card.categories.length - 1) {
+          <span class="text-sm text-grayLight">/</span>
+          } }
+        </div>
+
+        <p class="px-2 pb-4 text-primary">{{ card.description }}</p>
       </a>
     </li>
     }

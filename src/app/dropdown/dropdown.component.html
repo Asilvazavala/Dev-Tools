@@ -1,5 +1,5 @@
 <button
-  class="text-white w-40 relative border-2 focus:ring-1 ring-primary border-secondary font-medium rounded-lg text-sm px-4 py-2 text-center inline-flex justify-between items-center"
+  class="text-primary w-40 relative border-2 focus:ring-1 ring-primary border-secondary font-medium rounded-lg text-sm px-4 py-2 text-center inline-flex justify-between items-center"
   type="button"
   (click)="isDropdownOpen = !isDropdownOpen"
 >
@@ -25,13 +25,13 @@
 
 @if (isDropdownOpen) {
 <div
-  class="divide-y divide-gray-100 rounded-lg shadow w-[9.7rem] bg-gray-700 absolute"
+  class="divide-y divide-gray-100 rounded-lg shadow w-[9.7rem] bg-gray-900 absolute"
 >
   <ul class="py-2 text-sm text-gray-700 dark:text-gray-200">
     @for (item of dropdownItems; track $index) {
     <li
       (click)="handleDropdown(item)"
-      class="block px-4 py-2 hover:bg-gray-600 cursor-pointer"
+      class="block px-4 py-2 hover:bg-gray-800 cursor-pointer text-primary"
     >
       {{ item }}
     </li>
