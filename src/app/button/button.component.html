@@ -1,8 +1,16 @@
-<button
-  class="`{{
-    btn_class
-  }} lg:hover:brightness-110 lg:hover:animate-pulse font-bold py-3 px-6 rounded-full bg-gradient-to-r
-   from-purple-600 to-blue-700 `"
+<a
+  href="https://github.com/Asilvazavala/Dev-Tools"
+  target="_blank"
+  rel="noopener"
+  class="` btn {{ btn_class }} `"
 >
-  {{ btn_name }}
-</button>
+  <strong>{{ btn_name }}</strong>
+  <div id="container-stars">
+    <div id="stars"></div>
+  </div>
+
+  <div id="glow">
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+</a>

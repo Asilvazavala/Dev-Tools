@@ -85,7 +85,7 @@ export const cards: cards_props[] = [
     title: 'Next UI',
     categories: ['componentes', 'populares'],
     description:
-      'Colección de componentes modernos de React construidos con TailwindCSS, cuenta con reconocimiento automático de modo claro/oscuro.',
+      'Grupo de componentes modernos de React construidos con TailwindCSS, cuenta con reconocimiento automático de modo claro/oscuro.',
     link: 'https://nextui.org/',
     keywords: ['react', 'componente', 'tailwind'],
   },
@@ -375,7 +375,7 @@ export const cards: cards_props[] = [
     title: 'Frontendor',
     categories: ['plantillas', 'populares'],
     description:
-      'Plantillas y bloques HTML reutilizables para ayudarle a crear páginas de destino hermosas y profesionales de forma rápida y sencilla mediante COPIAR Y PEGAR.',
+      'Plantillas y bloques HTML reutilizables para ayudarle a crear páginas de destino hermosas y profesionales de forma rápida y sencilla.',
     link: 'https://frontendor.com/',
     keywords: ['plantillas'],
   },

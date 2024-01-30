@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-dropdown',
@@ -12,8 +13,11 @@ export class DropdownComponent {
   currentOrder = 'Nuevos primero';
   isDropdownOpen = false;
 
-  handleDropdown = (newOrder: string) => {
-    this.currentOrder = newOrder;
+  constructor(private sharedService: SharedService) {}
+
+  handleDropdown(newOrder: string): void {
     this.isDropdownOpen = false;
-  };
+    this.currentOrder = newOrder;
+    this.sharedService.setCurrentOrder(newOrder);
+  }
 }

@@ -14,6 +14,7 @@ import { cards, cards_props } from '../../utils/constants';
 export class CardsComponent implements OnInit {
   currentCategory = '';
   filteredCards: cards_props[] = [];
+  selectedDropdownItem = 'Nuevos primero';
 
   constructor(private sharedService: SharedService, private router: Router) {}
 
@@ -22,23 +23,42 @@ export class CardsComponent implements OnInit {
 
     this.sharedService.currentCategory$.subscribe((category) => {
       this.currentCategory = category;
+    });
+
+    this.sharedService.currentOrder$.subscribe((order) => {
+      this.selectedDropdownItem = order;
       this.filterCardsByCategory();
     });
   }
 
   private filterCardsByCategory(): void {
     if (this.currentCategory) {
-      this.filteredCards = cards.filter((card) =>
-        card.categories.includes(this.currentCategory)
-      );
+      this.filteredCards = cards
+        .filter((card) => card.categories.includes(this.currentCategory))
+        .sort(this.sortCards.bind(this));
 
       this.filteredCards.length === 0 && this.router.navigate(['/not-found']);
     } else if (this.currentCategory === '') {
-      this.filteredCards = cards.filter((card) =>
-        card.categories.includes('populares')
-      );
+      this.filteredCards = cards
+        .filter((card) => card.categories.includes('populares'))
+        .sort(this.sortCards.bind(this));
     } else {
-      this.filteredCards = cards;
+      this.filteredCards = cards.slice().sort(this.sortCards.bind(this));
+    }
+  }
+
+  private sortCards(a: cards_props, b: cards_props): number {
+    switch (this.selectedDropdownItem) {
+      case 'Nuevos primero':
+        return a.id - b.id;
+      case 'Últimos primero':
+        return b.id - a.id;
+      case 'A-Z':
+        return a.title.localeCompare(b.title);
+      case 'Z-A':
+        return b.title.localeCompare(a.title);
+      default:
+        return a.id - b.id;
     }
   }
 }
