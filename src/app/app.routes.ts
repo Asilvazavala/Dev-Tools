@@ -3,6 +3,7 @@ import { CategoryComponent } from './pages/category/category.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 export const routes: Routes = [
   {
@@ -16,6 +17,10 @@ export const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
   },
   {
     path: 'not-found',

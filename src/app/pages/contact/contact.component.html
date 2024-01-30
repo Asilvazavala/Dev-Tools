@@ -1,0 +1,55 @@
+<form
+  action="https://formsubmit.co/asilvazavala@gmail.com"
+  method="POST"
+  class="h-screen w-full flex flex-col justify-center items-center gap-4"
+>
+  <article class="flex flex-col gap-2">
+    <label class="text-grayLight font-bold" for="name">Nombre (opcional)</label>
+    <input
+      id="name"
+      name="name"
+      type="name"
+      class="text-primary bg-transparent px-4 py-2 rounded-md border-none outline-grayLight outline outline-1 hover:outline-2 transition w-80"
+      placeholder="Juan Peréz..."
+      (input)="handleChange($event, 'name')"
+    />
+  </article>
+
+  <article class="flex flex-col gap-2">
+    <label class="text-grayLight font-bold" for="email"
+      >Correo (opcional)</label
+    >
+    <input
+      id="email"
+      name="email"
+      type="email"
+      class="text-primary bg-transparent px-4 py-2 rounded-md border-none outline-grayLight outline outline-1 hover:outline-2 transition w-80"
+      placeholder="tucorreo@mail.com"
+      (input)="handleChange($event, 'email')"
+    />
+  </article>
+
+  <article class="flex flex-col gap-2">
+    <label class="text-grayLight font-bold" for="message">Mensaje</label>
+    <textarea
+      class="text-primary bg-transparent px-4 py-2 rounded-md border-none outline-grayLight outline outline-1 hover:outline-2 transition w-80"
+      name="message"
+      id="message"
+      cols="30"
+      rows="8"
+      placeholder="Quisiera que agregarán la página/herramienta...."
+      required
+    ></textarea>
+  </article>
+
+  <input type="hidden" name="_next" value="http://localhost:4200/" />
+  <input type="hidden" name="_captcha" value="false" />
+
+  <button
+    (click)="handleSubmit()"
+    type="submit"
+    class="bg-secondary px-4 py-2 rounded-lg text-sm lg:hover:bg-secondary/70 transition w-80"
+  >
+    Enviar mensaje
+  </button>
+</form>
