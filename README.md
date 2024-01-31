@@ -1,27 +1,50 @@
-# DevTools
+# Acerca de DevTools
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
+Proyecto creado para ayudar a los desarroladores web a encontrar las mejores herramientas/servicios. Componentes, plantillas, colores, fuentes e iconos son solo algunas de las categorías que podrás encontrar en esta página. El proyecto es de código abierto para que cualquier persona pueda contribuir añadiendo nuevas herramientas/servicios.
 
-## Development server
+Tecnologías: Angular, TypeScript & TailwindCSS.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+👉 Ve el proyecto aquí: [DevTools](https://as-work.vercel.app/)
 
-## Code scaffolding
+## 🧞 Comandos básicos
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Proyecto creado con:
 
-## Build
+```sh
+ng new dev-tools
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Todos los comandos son ejecutados en la raíz del proyecto, desde la terminal:
 
-## Running unit tests
+| Command                                | Action                                      |
+| :------------------------------------- | :------------------------------------------ |
+| `npm install`                          | Installs dependencies                       |
+| `ng serve`                             | Starts local dev server at `localhost:4200` |
+| `ng build`                             | Build your production site to `./dist/`     |
+| `ng test`                              | Execute the unit tests via Karma            |
+| `ng help`                              | Get more help on the Angular Cli            |
+| `ng generate component component-name` | Generate a new component                    |
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 👀 Comandos de las dependencias
 
-## Running end-to-end tests
+| Command                                           | Action                      |
+| :------------------------------------------------ | :-------------------------- |
+| `npm install -D tailwindcss postcss autoprefixer` | Installs TailwindCSS        |
+| `npx tailwindcss init`                            | Init TailwindCSS            |
+| `npm install ngx-toastr`                          | Installs Toastr             |
+| `npm install @angular/animations --save`          | Installs Angular animations |
+| `npm install @fontsource/inter`                   | Installs font inter         |
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Instalar todas las dependencias:
 
-## Further help
+```sh
+npm install -D tailwindcss postcss autoprefixer ngx-toastr @angular/animations --save @fontsource/inter
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 🎆 Imágenes del proyecto
+
+![logo](https://github.com/Asilvazavala/My-Portfolio/blob/31a5873c76318590e97c59254027e6e2686c5272/src/imagenes/Mobile/Portfolio/portfolio.png)
+
+![logo](https://github.com/Asilvazavala/My-Portfolio/blob/31a5873c76318590e97c59254027e6e2686c5272/src/imagenes/Mobile/Portfolio/portfolioMobile.png)
+
+![logo](https://github.com/Asilvazavala/My-Portfolio/blob/31a5873c76318590e97c59254027e6e2686c5272/src/imagenes/Mobile/Portfolio/portfolioMobile2.png)

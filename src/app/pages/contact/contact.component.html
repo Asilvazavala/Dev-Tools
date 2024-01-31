@@ -8,6 +8,7 @@
     <input
       id="name"
       name="name"
+      [value]="formValues.name"
       type="name"
       class="text-primary bg-transparent px-4 py-2 rounded-md border-none outline-grayLight outline outline-1 hover:outline-2 transition w-80"
       placeholder="Juan Peréz..."
@@ -22,6 +23,7 @@
     <input
       id="email"
       name="email"
+      [value]="formValues.email"
       type="email"
       class="text-primary bg-transparent px-4 py-2 rounded-md border-none outline-grayLight outline outline-1 hover:outline-2 transition w-80"
       placeholder="tucorreo@mail.com"
@@ -32,24 +34,27 @@
   <article class="flex flex-col gap-2">
     <label class="text-grayLight font-bold" for="message">Mensaje</label>
     <textarea
-      class="text-primary bg-transparent px-4 py-2 rounded-md border-none outline-grayLight outline outline-1 hover:outline-2 transition w-80"
-      name="message"
       id="message"
+      name="message"
+      [value]="formValues.message"
+      class="text-primary bg-transparent px-4 py-2 rounded-md border-none outline-grayLight outline outline-1 hover:outline-2 transition w-80"
       cols="30"
       rows="8"
       placeholder="Quisiera que agregarán la página/herramienta...."
+      (input)="handleChange($event, 'message')"
       required
     ></textarea>
   </article>
 
-  <input type="hidden" name="_next" value="http://localhost:4200/" />
+  <input type="hidden" name="_next" value="http://localhost:4200" />
   <input type="hidden" name="_captcha" value="false" />
 
   <button
+    [disabled]="isSubmiting"
     (click)="handleSubmit()"
     type="submit"
-    class="bg-secondary px-4 py-2 rounded-lg text-sm lg:hover:bg-secondary/70 transition w-80"
+    class="bg-secondary px-4 py-2 rounded-lg text-sm lg:hover:bg-secondary/70 transition w-80 cursor-pointer"
   >
-    Enviar mensaje
+    @if (isSubmiting) { <app-loading /> } @else { Enviar mensaje }
   </button>
 </form>
