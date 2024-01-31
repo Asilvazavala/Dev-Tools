@@ -1,0 +1,17 @@
+<div class="relative" (keydown.enter)="onSubmit()">
+  <img
+    src="/assets/svg/Search.svg"
+    alt="Logo DevTools"
+    class="w-6 h-auto object-cover cursor-pointer absolute left-2 top-1/2 transdiv -translate-y-1/2"
+    (click)="onSubmit()"
+  />
+  <input
+    id="search"
+    name="search"
+    [value]="searchValue.search"
+    (input)="handleChange($event, 'search')"
+    type="text"
+    class="pl-10 text-primary bg-transparent pr-4 py-2 rounded-md border-none outline-grayLight outline outline-1 hover:outline-2 transition"
+    placeholder="Buscar..."
+  />
+</div>

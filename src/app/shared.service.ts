@@ -11,11 +11,18 @@ export class SharedService {
   private currentOrderSubject = new BehaviorSubject<string>('Nuevos primero');
   currentOrder$ = this.currentOrderSubject.asObservable();
 
+  private currentSearchSubject = new BehaviorSubject<string>('');
+  currentSearch$ = this.currentSearchSubject.asObservable();
+
   setCurrentCategory(category: string): void {
     this.currentCategorySubject.next(category);
   }
 
   setCurrentOrder(order: string): void {
     this.currentOrderSubject.next(order);
+  }
+
+  setCurrentSearch(search: string): void {
+    this.currentSearchSubject.next(search);
   }
 }

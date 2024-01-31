@@ -6,7 +6,13 @@
       <h1
         class="text-secondary text-3xl md:text-4xl font-bold leading-8 tracking-wider uppercase"
       >
-        {{ currentCategory === "" ? "Populares" : currentCategory }}
+        {{
+          currentCategory === "" && currentSearch === ""
+            ? "Populares"
+            : currentSearch !== ""
+            ? currentSearch
+            : currentCategory
+        }}
       </h1>
       <span class="text-grayLight">{{ filteredCards.length }} resultados</span>
     </article>

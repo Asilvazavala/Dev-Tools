@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { SearchComponent } from '../search/search.component';
+import { SearchInputComponent } from '../searchInput/searchInput.component';
 import { SharedService } from '../shared.service';
 interface sidebar_categories_props {
   id: number;
@@ -14,7 +14,7 @@ interface sidebar_categories_props {
   standalone: true,
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css',
-  imports: [SearchComponent],
+  imports: [SearchInputComponent],
 })
 export class SidebarComponent {
   currentCategory = '';
