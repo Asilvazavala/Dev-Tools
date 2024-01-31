@@ -8,3 +8,7 @@
 :root {
   color-scheme: light dark;
 }
+
+body {
+  font-family: "Inter", sans-serif;
+}

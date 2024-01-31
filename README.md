@@ -4,7 +4,7 @@ Proyecto creado para ayudar a los desarrolladores web a encontrar las mejores he
 
 Tecnologías: Angular, TypeScript & TailwindCSS.
 
-👉 Ve el proyecto aquí: [DevTools](https://as-work.vercel.app/)
+👉 Ve el proyecto aquí: [DevTools](https://devtools-as.vercel.app/)
 
 ## 🧞 Comandos básicos
 
