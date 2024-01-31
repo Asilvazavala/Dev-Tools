@@ -29,10 +29,16 @@
       class="group overflow-hidden flex z-10 flex-col gap-2 border-2 border-primary rounded-2xl p-1 transition lg:hover:border-secondary"
     >
       <a href="{{ card.link }}" target="_blank" rel="noopener">
-        <div class="lg:max-h-[275px] overflow-hidden">
+        <div class="lg:max-h-[275px] overflow-hidden relative">
+          @if (isCardLoading) {
+          <div
+            class="animate-pulse w-full h-[275px] bg-gray-300 rounded-2xl"
+          ></div>
+          }
           <img
             src="{{ card.image }}"
             alt="{{ card.title }}"
+            (load)="onImageLoad()"
             class="w-full h-auto object-cover rounded-2xl mb-3 lg:group-hover:scale-125 duration-700"
           />
         </div>

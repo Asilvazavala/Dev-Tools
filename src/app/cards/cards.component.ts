@@ -12,10 +12,15 @@ import { cards, cards_props } from '../../utils/constants';
   imports: [DropdownComponent],
 })
 export class CardsComponent implements OnInit {
+  isCardLoading = true;
   currentCategory = '';
   currentSearch = '';
   currentOrder = 'Nuevos primero';
   filteredCards: cards_props[] = [];
+
+  onImageLoad(): void {
+    this.isCardLoading = false;
+  }
 
   constructor(private sharedService: SharedService, private router: Router) {}
 
