@@ -1,6 +1,6 @@
 # Acerca de DevTools
 
-Proyecto creado para ayudar a los desarroladores web a encontrar las mejores herramientas/servicios. Componentes, plantillas, colores, fuentes e iconos son solo algunas de las categorías que podrás encontrar en esta página. El proyecto es de código abierto para que cualquier persona pueda contribuir añadiendo nuevas herramientas/servicios.
+Proyecto creado para ayudar a los desarrolladores web a encontrar las mejores herramientas/servicios. Componentes, plantillas, colores, fuentes e iconos son solo algunas de las categorías que podrás encontrar en esta página. El proyecto es de código abierto para que cualquier persona pueda contribuir añadiendo nuevas herramientas/servicios.
 
 Tecnologías: Angular, TypeScript & TailwindCSS.
 
