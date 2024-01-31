@@ -18,8 +18,6 @@ interface FormValues {
   imports: [LoadingComponent, CommonModule],
 })
 export class ContactComponent {
-  constructor(private toastr: ToastrService) {}
-
   isSubmiting = false;
 
   formValues: FormValues = {
@@ -28,19 +26,18 @@ export class ContactComponent {
     message: '',
   };
 
+  constructor(private toastr: ToastrService) {}
+
   handleChange(event: any, fieldName: keyof FormValues): void {
     this.formValues[fieldName] = event.target.value;
   }
 
-  handleSubmit = () => {
-    this.isSubmiting = true;
-
+  handleSubmit(): void {
     if (this.formValues.message.trim() !== '') {
       this.toastr.success('Correo enviado con éxito ¡Gracias!', 'Éxito');
+      this.isSubmiting = true;
     } else {
       this.toastr.error('Completa el campo de mensaje por favor', 'Error');
     }
-
-    this.isSubmiting = false;
-  };
+  }
 }
