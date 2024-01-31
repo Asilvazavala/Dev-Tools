@@ -43,8 +43,6 @@ npm install -D tailwindcss postcss autoprefixer ngx-toastr @angular/animations -
 
 ## 🎆 Imágenes del proyecto
 
-![logo](https://github.com/Asilvazavala/My-Portfolio/blob/31a5873c76318590e97c59254027e6e2686c5272/src/imagenes/Mobile/Portfolio/portfolio.png)
+![logo](https://github.com/Asilvazavala/Dev-Tools/blob/f08b87483935d88f49579fe3ac0464df01cf141f/src/assets/images/project/Devtools%20Desktop.png)
 
-![logo](https://github.com/Asilvazavala/My-Portfolio/blob/31a5873c76318590e97c59254027e6e2686c5272/src/imagenes/Mobile/Portfolio/portfolioMobile.png)
-
-![logo](https://github.com/Asilvazavala/My-Portfolio/blob/31a5873c76318590e97c59254027e6e2686c5272/src/imagenes/Mobile/Portfolio/portfolioMobile2.png)
+![logo](https://github.com/Asilvazavala/Dev-Tools/blob/f08b87483935d88f49579fe3ac0464df01cf141f/src/assets/images/project/Devtools%20Mobile.png)
