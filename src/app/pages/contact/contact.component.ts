@@ -33,21 +33,14 @@ export class ContactComponent {
   }
 
   handleSubmit = () => {
+    this.isSubmiting = true;
+
     if (this.formValues.message.trim() !== '') {
-      this.isSubmiting = true;
       this.toastr.success('Correo enviado con éxito ¡Gracias!', 'Éxito');
-
-      setTimeout(() => {
-        this.isSubmiting = false;
-      }, 3000);
-
-      this.formValues = {
-        name: '',
-        email: '',
-        message: '',
-      };
     } else {
       this.toastr.error('Completa el campo de mensaje por favor', 'Error');
     }
+
+    this.isSubmiting = false;
   };
 }
