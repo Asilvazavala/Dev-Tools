@@ -14,74 +14,62 @@ import { cards, cards_props } from '../../utils/constants';
 export class CardsComponent implements OnInit {
   currentCategory = '';
   currentSearch = '';
+  currentOrder = 'Nuevos primero';
   filteredCards: cards_props[] = [];
-  selectedDropdownItem = 'Nuevos primero';
 
   constructor(private sharedService: SharedService, private router: Router) {}
 
   ngOnInit(): void {
-    this.filteredCards = cards;
-
     this.sharedService.currentCategory$.subscribe((category) => {
       this.currentCategory = category;
+      this.filterCards();
     });
 
     this.sharedService.currentSearch$.subscribe((search) => {
       this.currentSearch = search;
+      this.filterCards();
     });
 
     this.sharedService.currentOrder$.subscribe((order) => {
-      this.selectedDropdownItem = order;
-      this.filterCardsByCategory();
+      this.currentOrder = order;
+      this.filterCards();
     });
   }
 
-  private filterCardsByCategory(): void {
-    if (this.currentCategory) {
-      this.filteredCards = cards
-        .filter((card) => card.categories.includes(this.currentCategory))
-        .sort(this.sortCards.bind(this));
+  private filterByCategory(filter: string): void {
+    this.filteredCards = cards
+      .filter((card) => card.categories.includes(filter.toLowerCase()))
+      .sort(this.sortCards.bind(this));
+  }
 
+  private filterBySearch(search: string): void {
+    this.filteredCards = cards
+      .filter(
+        (card) =>
+          card.title.toLowerCase().includes(search.toLowerCase()) ||
+          (card.keywords &&
+            card.keywords.some((keyword) =>
+              keyword.toLowerCase().includes(search.toLowerCase())
+            ))
+      )
+      .sort(this.sortCards.bind(this));
+  }
+
+  private filterCards(): void {
+    if (this.currentCategory) {
+      this.filterByCategory(this.currentCategory);
       this.filteredCards.length === 0 && this.router.navigate(['/not-found']);
-    } else if (this.currentCategory === '') {
-      this.filteredCards = cards
-        .filter((card) => card.categories.includes('populares'))
-        .sort(this.sortCards.bind(this));
     } else {
-      this.filteredCards = cards.slice().sort(this.sortCards.bind(this));
+      this.filterByCategory('populares');
+    }
+
+    if (this.currentSearch) {
+      this.filterBySearch(this.currentSearch);
     }
   }
 
-  // private filterCardsByCategory(): void {
-  //   let filteredByCategory: cards_props[] = [];
-
-  //   if (this.currentCategory) {
-  //     filteredByCategory = cards.filter((card) =>
-  //       card.categories.includes(this.currentCategory)
-  //     );
-  //   } else if (this.currentCategory === '') {
-  //     filteredByCategory = cards.filter((card) =>
-  //       card.categories.includes('populares')
-  //     );
-  //   } else {
-  //     filteredByCategory = cards.slice();
-  //   }
-
-  //   if (this.currentSearch) {
-  //     this.filteredCards = filteredByCategory
-  //       .filter((card) =>
-  //         card.title.toLowerCase().includes(this.currentSearch.toLowerCase())
-  //       )
-  //       .sort(this.sortCards.bind(this));
-  //   } else {
-  //     this.filteredCards = filteredByCategory.sort(this.sortCards.bind(this));
-  //   }
-
-  //   this.filteredCards.length === 0 && this.router.navigate(['/not-found']);
-  // }
-
   private sortCards(a: cards_props, b: cards_props): number {
-    switch (this.selectedDropdownItem) {
+    switch (this.currentOrder) {
       case 'Nuevos primero':
         return a.id - b.id;
       case 'Últimos primero':

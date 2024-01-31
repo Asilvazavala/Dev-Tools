@@ -18,13 +18,20 @@ interface sidebar_categories_props {
 })
 export class SidebarComponent {
   currentCategory = '';
+  currentSearch = '';
 
   constructor(private sharedService: SharedService) {}
 
   ngOnInit(): void {
-    this.sharedService.currentCategory$.subscribe((category) => {
-      this.currentCategory = category;
+    this.sharedService.currentSearch$.subscribe((search) => {
+      this.currentSearch = search;
     });
+
+    if (this.currentSearch === '') {
+      this.sharedService.currentCategory$.subscribe((category) => {
+        this.currentCategory = category;
+      });
+    }
   }
 
   sidebar_categories: sidebar_categories_props[] = [

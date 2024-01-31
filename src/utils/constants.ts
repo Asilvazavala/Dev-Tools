@@ -17,7 +17,7 @@ export const cards: cards_props[] = [
     description:
       'Colección de paleta de colores para diseñadores y artistas, cuenta con filtros por popularidad, color, recientes, etc.',
     link: 'https://colorhunt.co/',
-    keywords: ['color'],
+    keywords: ['color', 'css'],
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ export const cards: cards_props[] = [
     description:
       'Generador de paleta de colores para TailwindCSS, cuenta con ejemplos de uso en imágenes, banners, botones, etc.',
     link: 'https://uicolors.app/create',
-    keywords: ['color'],
+    keywords: ['color', 'css'],
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ export const cards: cards_props[] = [
     description:
       'Generador de paleta de colores y API para TailwindCSS, donde puedes personalizar el matiz, saturación, luminosidad, etc.',
     link: 'https://www.tints.dev/',
-    keywords: ['color'],
+    keywords: ['color', 'css'],
   },
   {
     id: 4,
@@ -47,7 +47,7 @@ export const cards: cards_props[] = [
     description:
       'Colección de paleta de colores, como curiosidad te explica la psicología de cada color para determinar su uso.',
     link: 'https://www.happyhues.co/',
-    keywords: ['color'],
+    keywords: ['color', 'css'],
   },
   {
     id: 5,
@@ -57,7 +57,7 @@ export const cards: cards_props[] = [
     description:
       'Herramienta para calcular fácilmente el radio de contraste entre un color de fondo y un color de texto.',
     link: 'https://www.siegemedia.com/contrast-ratio',
-    keywords: ['color', 'contraste'],
+    keywords: ['color', 'contraste', 'css'],
   },
   {
     id: 6,
@@ -67,7 +67,7 @@ export const cards: cards_props[] = [
     description:
       'Explora y encuentra colores accesibles comparando el contraste entre un color de fondo y un color de texto.',
     link: 'https://color.review/',
-    keywords: ['color', 'contraste'],
+    keywords: ['color', 'contraste', 'css'],
   },
   {
     id: 7,
@@ -87,7 +87,7 @@ export const cards: cards_props[] = [
     description:
       'Grupo de componentes modernos de React construidos con TailwindCSS, cuenta con reconocimiento automático de modo claro/oscuro.',
     link: 'https://nextui.org/',
-    keywords: ['react', 'componente', 'tailwind'],
+    keywords: ['react', 'componente', 'tailwind', 'javascript'],
   },
   {
     id: 9,
@@ -117,7 +117,7 @@ export const cards: cards_props[] = [
     description:
       'Una colección de más de 120 componentes y bloques HTML para TailwindCSS totalmente responsivos.',
     link: 'https://wickedblocks.dev/',
-    keywords: ['HTML', 'componente', 'tailwind'],
+    keywords: ['HTML', 'componente', 'tailwind', 'javascript'],
   },
   {
     id: 12,
@@ -127,7 +127,7 @@ export const cards: cards_props[] = [
     description:
       'Componentes de interfaz de usuario completamente accesibles para React y Vue, diseñados para integrarse con Tailwind CSS.',
     link: 'https://headlessui.com/',
-    keywords: ['react', 'componente', 'tailwind', 'vue'],
+    keywords: ['react', 'componente', 'tailwind', 'vue', 'javascript'],
   },
   {
     id: 13,
@@ -137,7 +137,7 @@ export const cards: cards_props[] = [
     description:
       'Sube tus proyectos front-end y back-end, los proyectos se actualizan automáticamente al actualizar el repositorio Github enlazado.',
     link: 'https://vercel.com/',
-    keywords: ['deploy', 'frontend', 'backend'],
+    keywords: ['deploy', 'frontend', 'backend', 'javascript'],
   },
   {
     id: 14,
@@ -177,7 +177,7 @@ export const cards: cards_props[] = [
     description:
       'Construye formularios basados en React eficaces, declarativos, intuitivos y adaptables.',
     link: 'https://formik.org/',
-    keywords: ['formulario', 'react'],
+    keywords: ['formulario', 'react', 'javascript'],
   },
   {
     id: 18,
@@ -187,7 +187,7 @@ export const cards: cards_props[] = [
     description:
       'Formularios basados en React eficaces, flexibles y extensibles con validación fácil de usar.',
     link: 'https://react-hook-form.com/',
-    keywords: ['formulario', 'react'],
+    keywords: ['formulario', 'react', 'javascript'],
   },
   {
     id: 19,
@@ -207,7 +207,7 @@ export const cards: cards_props[] = [
     description:
       'Colección de más de 1600 fuentes, las cuales pueden ser descargadas o instaladas en tu editor de código favorito.',
     link: 'https://fontsource.org/',
-    keywords: ['fuente'],
+    keywords: ['fuente', 'html', 'css'],
   },
   {
     id: 21,
@@ -217,7 +217,7 @@ export const cards: cards_props[] = [
     description:
       'Colección de fuentes subidas por la comunidad, incluye una sección para emparejar fuentes.',
     link: 'https://www.fontshare.com/',
-    keywords: ['fuente'],
+    keywords: ['fuente', 'html', 'css'],
   },
   {
     id: 22,
@@ -227,7 +227,7 @@ export const cards: cards_props[] = [
     description:
       'Colección de más de 1500 fuentes, las cuales pueden ser descargadas o instaladas en tu editor de código favorito.',
     link: 'https://fonts.google.com/',
-    keywords: ['fuente'],
+    keywords: ['fuente', 'html', 'css'],
   },
   {
     id: 23,
@@ -237,7 +237,7 @@ export const cards: cards_props[] = [
     description:
       'Fuentes y combinaciones de fuentes gratuitas para usar en su próximo proyecto de diseño.',
     link: 'https://www.fontpair.co/',
-    keywords: ['fuente'],
+    keywords: ['fuente', 'html', 'css'],
   },
   {
     id: 24,
@@ -247,7 +247,7 @@ export const cards: cards_props[] = [
     description:
       'Más de 4900 iconos en píxeles para diseño web, gratuitos y de código abierto diseñados para hacer que su sitio web o aplicación sea atractivo',
     link: 'https://tabler.io/icons',
-    keywords: ['iconos'],
+    keywords: ['iconos', 'html', 'css'],
   },
   {
     id: 25,
@@ -257,7 +257,7 @@ export const cards: cards_props[] = [
     description:
       'Biblioteca de más de 30,000 iconos y conjunto de herramientas de Internet diseño web, gratuitos y de código abierto.',
     link: 'https://fontawesome.com/search',
-    keywords: ['iconos'],
+    keywords: ['iconos', 'html', 'css'],
   },
   {
     id: 26,
@@ -267,7 +267,7 @@ export const cards: cards_props[] = [
     description:
       'Incluya íconos populares en sus proyectos de React fácilmente, utiliza importaciones de ES6.',
     link: 'https://react-icons.github.io/react-icons/',
-    keywords: ['iconos', 'react'],
+    keywords: ['iconos', 'react', 'html', 'css'],
   },
   {
     id: 27,
@@ -277,7 +277,7 @@ export const cards: cards_props[] = [
     description:
       'Íconos web de alta calidad de código abierto cuidadosamente elaborados para diseñadores y desarrolladores.',
     link: 'https://boxicons.com/',
-    keywords: ['iconos'],
+    keywords: ['iconos', 'html', 'css'],
   },
   {
     id: 28,
@@ -287,7 +287,7 @@ export const cards: cards_props[] = [
     description:
       'Streamings sobre Desarrollo FullStack con JavaScript. Directos completos y extracto de los mejores momentos.',
     link: 'https://www.youtube.com/@midulive',
-    keywords: ['streamers', 'javascript'],
+    keywords: ['streamers', 'javascript', 'typescript'],
   },
   {
     id: 29,
@@ -297,7 +297,7 @@ export const cards: cards_props[] = [
     description:
       'Soluciones de desarrollo FullStack, videos y directos sobre simulacros de entrevistas, integraciones, etc.',
     link: 'https://www.youtube.com/@goncypozzo',
-    keywords: ['streamers', 'typescript'],
+    keywords: ['streamers', 'javascript', 'typescript'],
   },
   {
     id: 30,
@@ -307,7 +307,7 @@ export const cards: cards_props[] = [
     description:
       'Tutoriales de programación y desarrollo de software. Aprende a crear aplicaciones Web, Android e iOS con Python, Kotlin, Swift y mucho más...        ',
     link: 'https://www.youtube.com/@mouredev',
-    keywords: ['streamers', 'mobile'],
+    keywords: ['streamers', 'mobile', 'python'],
   },
   {
     id: 31,
@@ -327,7 +327,7 @@ export const cards: cards_props[] = [
     description:
       'Consejos y tips para desarrolladores web, videos sobre pruebas técnicas, tutoriales, ruta de aprendizaje, etc.',
     link: 'https://www.youtube.com/@ProgramadorX',
-    keywords: ['streamers'],
+    keywords: ['streamers', 'tutorial'],
   },
   {
     id: 33,
@@ -337,7 +337,7 @@ export const cards: cards_props[] = [
     description:
       'Programación, desarrollo Web y muchos otros temas relacionados al mundo de la informática en general. Desde aprender las bases de un lenguaje de programacion hasta subir tu sitio o aplicación Web.',
     link: 'https://www.youtube.com/@FaztTech',
-    keywords: ['streamers'],
+    keywords: ['streamers', 'tutorial'],
   },
   {
     id: 34,
@@ -347,7 +347,7 @@ export const cards: cards_props[] = [
     description:
       'Aprende a programar gratis. Construye Proyectos. Obtén Certificaciones. freeCodeCamp es una organización sin fines de lucro cuya misión es crear recursos gratis para ayudarte a aprender a programar.',
     link: 'https://www.youtube.com/@freecodecampespanol',
-    keywords: ['streamers'],
+    keywords: ['streamers', 'freeCodeCamp'],
   },
   {
     id: 35,
@@ -357,7 +357,7 @@ export const cards: cards_props[] = [
     description:
       'Canal de diseño y desarrollo web, donde puedes encontrar contenido de Javascript, Bootstrap, TailwindCSS, Node.js, PHP y MySQL y más recursos necesarios para ser el mejor desarrollador web.',
     link: 'https://www.youtube.com/@vidamrr',
-    keywords: ['streamers', 'javascript'],
+    keywords: ['streamers', 'javascript', 'tailwind', 'php'],
   },
   {
     id: 36,
@@ -367,7 +367,7 @@ export const cards: cards_props[] = [
     description:
       'Plantillas HTML, Bootstrap y Tailwind gratuitas para sitios web, páginas de destino, próximamente, blogs, portafolios, comercio electrónico y paneles de control.',
     link: 'https://htmlrev.com/?utm_source=public_apis',
-    keywords: ['plantillas'],
+    keywords: ['plantillas', 'html', 'css'],
   },
   {
     id: 37,
@@ -377,7 +377,7 @@ export const cards: cards_props[] = [
     description:
       'Plantillas y bloques HTML reutilizables para ayudarle a crear páginas de destino hermosas y profesionales de forma rápida y sencilla.',
     link: 'https://frontendor.com/',
-    keywords: ['plantillas'],
+    keywords: ['plantillas', 'html', 'css'],
   },
   {
     id: 38,
@@ -387,7 +387,7 @@ export const cards: cards_props[] = [
     description:
       'La plantilla de panel de administración gratuita, los temas HTML y los kits U seleccionados, de alta calidad, diseño moderno, profesionales y fáciles de usar crean su aplicación más rápido.',
     link: 'https://themeselection.com/',
-    keywords: ['plantillas'],
+    keywords: ['plantillas', 'html', 'css'],
   },
   {
     id: 39,
@@ -397,6 +397,6 @@ export const cards: cards_props[] = [
     description:
       'Plataforma de diseño gráfico, utilizada para crear gráficos, presentaciones, carteles, documentos y otro contenido visual para redes sociales.',
     link: 'https://www.canva.com/',
-    keywords: ['plantillas'],
+    keywords: ['plantillas', 'html', 'css'],
   },
 ];
