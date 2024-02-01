@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { ButtonComponent } from '../button/button.component';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 
@@ -11,9 +13,10 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
 })
 export class NavbarComponent {
   isMenuOpen = false;
-  isNavbarLoading = true;
 
-  onImageLoad(): void {
-    this.isNavbarLoading = false;
+  constructor(private router: Router) {}
+
+  handleNavigation(): void {
+    this.router.navigate(['/']);
   }
 }

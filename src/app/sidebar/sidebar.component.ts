@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { SearchInputComponent } from '../searchInput/searchInput.component';
 import { SharedService } from '../shared.service';
@@ -20,7 +21,7 @@ export class SidebarComponent {
   currentCategory = '';
   currentSearch = '';
 
-  constructor(private sharedService: SharedService) {}
+  constructor(private sharedService: SharedService, private router: Router) {}
 
   ngOnInit(): void {
     this.sharedService.currentSearch$.subscribe((search) => {
@@ -32,6 +33,10 @@ export class SidebarComponent {
         this.currentCategory = category;
       });
     }
+  }
+
+  onSelectCategory(route: string): void {
+    this.router.navigate([route]);
   }
 
   sidebar_categories: sidebar_categories_props[] = [

@@ -11,7 +11,7 @@
         Categorías
       </h2>
       @for (categorie of sidebar_categories; track categorie.id) {
-      <a href="{{ categorie.link }}" class="w-fit">
+      <div (click)="onSelectCategory(categorie.link)" class="w-fit">
         <li
           class="` cursor-pointer {{
             categorie.name.toLowerCase() === currentCategory
@@ -29,7 +29,7 @@
           />
           <span>{{ categorie.name }}</span>
         </li>
-      </a>
+      </div>
       }
     </ul>
   </article>

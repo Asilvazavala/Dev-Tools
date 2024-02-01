@@ -24,6 +24,8 @@ export class SearchComponent implements OnInit {
     this.route.queryParams.subscribe((params) => {
       this.query = params['query'];
       this.sharedService.setCurrentSearch(this.query);
+      this.sharedService.setCurrentCategory('');
+      this.sharedService.setCurrentOrder('Nuevos primero');
     });
   }
 }
