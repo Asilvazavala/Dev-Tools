@@ -5,9 +5,13 @@
     class="py-2 px-4 lg:px-16 flex justify-between items-center w-full backdrop-blur-md"
   >
     <a href="/">
+      @if (isNavbarLoading) {
+      <div class="animate-pulse w-28 h-auto bg-gray-300 md:w-36"></div>
+      }
       <img
         src="/assets/images/general/Logo devTools.webp"
         alt="Logo DevTools"
+        (load)="onImageLoad()"
         class="w-28 h-auto object-cover cursor-pointer md:w-36"
       />
     </a>

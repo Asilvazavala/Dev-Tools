@@ -11,4 +11,9 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
 })
 export class NavbarComponent {
   isMenuOpen = false;
+  isNavbarLoading = true;
+
+  onImageLoad(): void {
+    this.isNavbarLoading = false;
+  }
 }
