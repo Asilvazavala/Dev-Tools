@@ -14,6 +14,9 @@ export class SharedService {
   private currentSearchSubject = new BehaviorSubject<string>('');
   currentSearch$ = this.currentSearchSubject.asObservable();
 
+  private isCardLoadingSubject = new BehaviorSubject<boolean>(true);
+  isCardLoading$ = this.isCardLoadingSubject.asObservable();
+
   setCurrentCategory(category: string): void {
     this.currentCategorySubject.next(category);
   }
@@ -24,5 +27,9 @@ export class SharedService {
 
   setCurrentSearch(search: string): void {
     this.currentSearchSubject.next(search);
+  }
+
+  setIsCardLoading(state: boolean): void {
+    this.isCardLoadingSubject.next(state);
   }
 }

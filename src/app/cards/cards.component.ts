@@ -25,6 +25,10 @@ export class CardsComponent implements OnInit {
   constructor(private sharedService: SharedService, private router: Router) {}
 
   ngOnInit(): void {
+    this.sharedService.isCardLoading$.subscribe((state) => {
+      this.isCardLoading = state;
+    });
+
     this.sharedService.currentCategory$.subscribe((category) => {
       this.currentCategory = category;
       this.filterCards();

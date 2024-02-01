@@ -26,6 +26,7 @@ export class CategoryComponent implements OnInit {
       this.sharedService.setCurrentCategory(this.currentCategory);
       this.sharedService.setCurrentOrder('Nuevos primero');
       this.sharedService.setCurrentSearch('');
+      this.sharedService.setIsCardLoading(true);
     });
   }
 }

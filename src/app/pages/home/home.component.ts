@@ -18,5 +18,6 @@ export class HomeComponent {
     this.sharedService.setCurrentCategory('');
     this.sharedService.setCurrentOrder('Nuevos primero');
     this.sharedService.setCurrentSearch('');
+    this.sharedService.setIsCardLoading(true);
   }
 }
