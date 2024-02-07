@@ -16,6 +16,7 @@ export class CardsComponent implements OnInit {
   currentCategory = '';
   currentSearch = '';
   currentOrder = 'Nuevos primero';
+  changeOrder = true;
   filteredCards: cards_props[] = [];
 
   onImageLoad(): void {
@@ -27,15 +28,20 @@ export class CardsComponent implements OnInit {
   ngOnInit(): void {
     this.sharedService.currentCategory$.subscribe((category) => {
       this.currentCategory = category;
+      this.changeOrder = true;
       this.filterCards();
     });
 
     this.sharedService.currentSearch$.subscribe((search) => {
       this.currentSearch = search;
+      this.changeOrder = true;
       this.filterCards();
     });
 
     this.sharedService.currentOrder$.subscribe((order) => {
+      if (this.currentOrder !== order) {
+        this.changeOrder = false;
+      }
       this.currentOrder = order;
       this.filterCards();
     });
@@ -61,7 +67,8 @@ export class CardsComponent implements OnInit {
   }
 
   private filterCards(): void {
-    this.isCardLoading = true;
+    if (this.changeOrder) this.isCardLoading = true;
+
     if (this.currentCategory) {
       this.filterByCategory(this.currentCategory);
       this.filteredCards.length === 0 && this.router.navigate(['/not-found']);

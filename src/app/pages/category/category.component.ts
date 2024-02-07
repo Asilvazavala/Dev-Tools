@@ -23,8 +23,10 @@ export class CategoryComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       this.currentCategory = params['name'];
-      this.sharedService.setCurrentSearch('');
       this.sharedService.setCurrentCategory(this.currentCategory);
+
+      this.sharedService.setCurrentSearch('');
+
       this.sharedService.setCurrentOrder('Nuevos primero');
     });
   }

@@ -16,7 +16,9 @@ export class HomeComponent {
 
   ngOnInit(): void {
     this.sharedService.setCurrentSearch('');
+
     this.sharedService.setCurrentCategory('');
+
     this.sharedService.setCurrentOrder('Nuevos primero');
   }
 }
