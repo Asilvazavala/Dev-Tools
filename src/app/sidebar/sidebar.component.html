@@ -11,7 +11,12 @@
         Categorías
       </h2>
       @for (categorie of sidebar_categories; track categorie.id) {
-      <div (click)="onSelectCategory(categorie.link)" class="w-fit">
+      <a
+        routerLink="{{ categorie.link }}"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        class="w-fit"
+      >
         <li
           class="` cursor-pointer {{
             categorie.name.toLowerCase() === currentCategory
@@ -29,7 +34,7 @@
           />
           <span>{{ categorie.name }}</span>
         </li>
-      </div>
+      </a>
       }
     </ul>
   </article>

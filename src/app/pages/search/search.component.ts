@@ -26,7 +26,6 @@ export class SearchComponent implements OnInit {
       this.sharedService.setCurrentSearch(this.query);
       this.sharedService.setCurrentCategory('');
       this.sharedService.setCurrentOrder('Nuevos primero');
-      this.sharedService.setIsCardLoading(true);
     });
   }
 }

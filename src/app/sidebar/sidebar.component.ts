@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import {
+  Router,
+  RouterLink,
+  RouterOutlet,
+  RouterLinkActive,
+} from '@angular/router';
 
 import { SearchInputComponent } from '../searchInput/searchInput.component';
 import { SharedService } from '../shared.service';
@@ -15,7 +20,7 @@ interface sidebar_categories_props {
   standalone: true,
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css',
-  imports: [SearchInputComponent],
+  imports: [SearchInputComponent, RouterOutlet, RouterLink, RouterLinkActive],
 })
 export class SidebarComponent {
   currentCategory = '';
@@ -33,10 +38,6 @@ export class SidebarComponent {
         this.currentCategory = category;
       });
     }
-  }
-
-  onSelectCategory(route: string): void {
-    this.router.navigate([route]);
   }
 
   sidebar_categories: sidebar_categories_props[] = [

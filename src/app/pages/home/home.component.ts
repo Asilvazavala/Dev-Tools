@@ -15,9 +15,8 @@ export class HomeComponent {
   constructor(private sharedService: SharedService) {}
 
   ngOnInit(): void {
+    this.sharedService.setCurrentSearch('');
     this.sharedService.setCurrentCategory('');
     this.sharedService.setCurrentOrder('Nuevos primero');
-    this.sharedService.setCurrentSearch('');
-    this.sharedService.setIsCardLoading(true);
   }
 }

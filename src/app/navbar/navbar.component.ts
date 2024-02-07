@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+
+import { SharedService } from '../shared.service';
 
 import { ButtonComponent } from '../button/button.component';
 import { SidebarComponent } from '../sidebar/sidebar.component';
@@ -9,14 +11,26 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
   standalone: true,
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
-  imports: [ButtonComponent, SidebarComponent],
+  imports: [
+    ButtonComponent,
+    SidebarComponent,
+    RouterOutlet,
+    RouterLink,
+    RouterLinkActive,
+  ],
 })
-export class NavbarComponent {
-  isMenuOpen = false;
+export class NavbarComponent implements OnInit {
+  isMenuOpen: boolean = false;
 
-  constructor(private router: Router) {}
+  constructor(private sharedService: SharedService) {}
 
-  handleNavigation(): void {
-    this.router.navigate(['/']);
+  ngOnInit(): void {
+    this.sharedService.currentCategory$.subscribe((category) => {
+      if (category !== '') this.isMenuOpen = false;
+    });
+
+    this.sharedService.currentSearch$.subscribe((search) => {
+      if (search !== '') this.isMenuOpen = false;
+    });
   }
 }

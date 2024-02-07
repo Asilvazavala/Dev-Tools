@@ -4,12 +4,13 @@
   <nav
     class="py-2 px-4 lg:px-16 flex justify-between items-center w-full backdrop-blur-md"
   >
-    <img
-      src="/assets/images/general/Logo devTools.webp"
-      (click)="handleNavigation()"
-      alt="Logo DevTools"
-      class="w-28 h-auto object-cover cursor-pointer md:w-36"
-    />
+    <a routerLink="/">
+      <img
+        src="/assets/images/general/Logo devTools.webp"
+        alt="Logo DevTools"
+        class="w-28 h-auto object-cover cursor-pointer md:w-36"
+      />
+    </a>
 
     <aside class="gap-4 hidden lg:flex">
       <app-button btn_name="Agregar tool" />
